@@ -2,13 +2,6 @@
 This is the code for our CVPR 2023 paper :
 [HexPlane: A Fast Representation for Dynamic Scenes](https://caoang327.github.io/HexPlane/)
 
-[Ang Cao](https://caoang327.github.io),
-[Justin Johnson](https://web.eecs.umich.edu/~justincj)
-
-![image](docs/method.png)
-**HexPlane is an elegant solution to explicitly represent dynamic 3D scenes, decomposing a 4D spacetime grid into six feature planes spanning each pair of coordinate axes (e.g., XY, ZT). It computes a feature vector for a 4D point in spacetime by projecting the point onto each feature plane. then aggregating the six resulting feature vectors. The fused feature vector is then passed to a tiny MLP which predicts the color of the point; novel views can then be rendered via volume rendering.** 
-
-If you have any questions, please feel free to email me at ancao@umich.edu.
 
 # Environment Setup
 ```
@@ -25,6 +18,12 @@ If you have any questions, please feel free to email me at ancao@umich.edu.
 
 ```
 # Data Preparation
+
+On Car Fusion:
+Move the images to the train, test, and val folder, preferably(80% train, 10% test, 10% val). Then using create_json.py create JSON files for train, test, and val respectively.
+
+
+
 Both [D-NeRF dataset](https://github.com/albertpumarola/D-NeRF)  and [Plenoptic Dataset](https://github.com/facebookresearch/Neural_3D_Video) could be downloaded from their official websites. 
 
 Please change the "datadir" in config based on the locations of downloaded datasets.
@@ -60,21 +59,4 @@ python main.py config=dnerf_slim.yaml systems.ckpt="checkpoint/path" render_only
 ```
 
 
-# Acknowledgement
-Toyota Research Institute provided funds to support this work but this article solely reflects the opinions and conclusions of its authors and not TRI or any other Toyota entity. We thank Shengyi Qian for the title suggestion, David Fouhey, Mohamed El Banani, Ziyang Chen, Linyi Jin and for helpful discussions and feedbacks.
-
-Our code is hugely influenced by [TensoRF](https://github.com/apchenstu/TensoRF) and many other projects.
-We would like to acknowledge them for making great code openly available for us to use.
-
-
-
-If you find this code useful, please consider citing:
-```
-    @article{Cao2023HexPlane,
-    author    = {Cao, Ang and Johnson, Justin},
-    title     = {HexPlane: A Fast Representation for Dynamic Scenes},
-    journal   = {CVPR},
-    year      = {2023},
-    }
-```
 # HexPlane_carfusion
