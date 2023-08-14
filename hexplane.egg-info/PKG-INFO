@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: hexplane
+Version: 1.0
+Summary: HexPlane: A Fast Representation for Dynamic Scenes
+Author: Ang Cao, and Justin Johnson
+License: MIT
+Requires-Python: >=3.8
+License-File: LICENSE

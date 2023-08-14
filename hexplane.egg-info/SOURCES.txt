@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+hexplane.egg-info/PKG-INFO
+hexplane.egg-info/SOURCES.txt
+hexplane.egg-info/dependency_links.txt
+hexplane.egg-info/top_level.txt
+hexplane.egg-info/zip-safe
